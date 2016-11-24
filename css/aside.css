@@ -1,0 +1,28 @@
+@charset "utf-8";
+.aside-scroll {
+    position: fixed;
+    top: 254px;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    z-index: 100;
+}
+
+.aside-scroll ul {
+    list-style: none;
+}
+.aside-scroll ul li{
+	padding:10px 0;
+}
+.aside-scroll ul a {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 15px;
+    border-radius: 3px;
+    border: 1px solid #666;
+}
+
+.aside-scroll ul a.active{
+	background: #000;
+}
