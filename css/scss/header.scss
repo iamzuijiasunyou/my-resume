@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/*头部样式*/
+
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 65px;
+    background: rgba(153, 153, 153, 0.3);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/*头部左边个人信息区域*/
+.author {
+    float: left;
+    margin-left: 30px;
+}
+
+.author-logo {
+    float: left;
+    font-size: 0;
+}
+
+.author-logo img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.author-info {
+    float: left;
+    margin-left: 15px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.author-info p {
+    padding: 0 10px;
+}
+
+.author-info hr {
+    border: 0;
+    border-top: 1px solid #000;
+}
+
+/*右边导航区域*/
+.header-nav {
+    float: right;
+    margin-right: 60px;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list li a {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 20px;
+	line-height: 63px;
+	color: #666;
+}
+.nav-list li a:hover{
+	border-bottom: 2px solid #1FAEFF;
+	color: #000;
+}

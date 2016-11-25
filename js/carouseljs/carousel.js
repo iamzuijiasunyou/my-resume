@@ -129,8 +129,6 @@ var Carousel = function(carouselObj) {
 
     //绑定前后按钮
     prevNext.forEach(function(ele, index) {
-
-
         addEvent(ele, "click", handlePrevNext);
     });
 

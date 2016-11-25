@@ -22,7 +22,7 @@ var $ = function(id) {
 /*
  *全屏页面对象
  *@param {object} pageObj 页面对象
- *pageObj = {id:"",slideTime:"",navId:""}
+ *pageObj = {id:"",navId:"",slideTime:""}
  */
 var Page = function(pageObj) {
     var wrapper = $(pageObj.id),
@@ -42,6 +42,7 @@ var Page = function(pageObj) {
     //初始化,赋予wrapper过渡效果
     function init() {
         curPage = pageList[0];
+        curPage.classList.add("active")
         curIndex = 0;
         wrapper.style.top = 0;
         wrapper.style.transition = "top " + slideTime / 1000 + "s";
@@ -86,6 +87,7 @@ var Page = function(pageObj) {
         }
         changeState(index);
         freezeAnimate();
+
         curIndex = index;
         curPage.classList.remove("active");
         curPage = pageList[curIndex];
@@ -123,6 +125,7 @@ var Page = function(pageObj) {
         delta > 0 ? _prev() : _next();
     }
 
+    
     function freezeAnimate() {
         isAnimate = true;
 

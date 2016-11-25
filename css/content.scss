@@ -1,0 +1,664 @@
+@charset "utf-8";
+
+/*主要的内容区域*/
+
+.fullpage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.page-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.fullpage .page {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 85px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+/* .fullpage .page.active{
+    animation: show 1s linear .8s forwards;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+ */
+
+
+/*内容的头部 公有部分*/
+
+.page-header {
+    text-align: center;
+}
+
+.page-header .title {
+    margin: 5px 0;
+    font-size: 24px;
+}
+
+.page-header hr {
+    width: 0px;
+    height: 2px;
+    margin: 0 auto;
+    background: #f00;
+    border: none;
+    transition: width linear .8s .8s
+}
+
+.page-header .title-eng {
+    margin: 5px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #f00;
+}
+
+.page-header .title-eng:before,
+.page-header .title-eng:after {
+    display: inline-block;
+    content: "·";
+    padding: 0 10px;
+}
+
+.active .page-header hr {
+    width: 150px;
+}
+
+
+/*page1: index start*/
+
+.index hr {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.my-photo {
+    position: relative;
+    height: 154px;
+    margin-top: 5%;
+}
+
+.my-photo img {
+    display: block;
+    position: absolute;
+    width: 154px;
+    height: 154px;
+    left: 50%;
+    top: 0;
+    margin-left: -77px;
+    border-radius: 50%;
+}
+
+.my-photo .front {
+    z-index: 10;
+    transition: opacity 1.3s;
+}
+
+.my-photo .front:hover {
+    opacity: 0;
+    box-shadow: 0px 0px 5px #aad7ff;
+}
+
+.moto {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.moto:first-letter {
+    text-transform: uppercase;
+}
+
+.back {
+    opacity: 0;
+    box-shadow: 0px 0px 10px #FF0000;
+    transition: all 1.5s;
+}
+
+.my-photo .front:hover + .back {
+    opacity: 1;
+}
+
+.index p {
+    margin: 15px 0;
+}
+
+
+/*page2: about-me start*/
+
+.my-info {
+    width: 50%;
+    height: 150px;
+    padding: 0 5%;
+    margin: 30px auto;
+    border-radius: 30px;
+    background: #a0a0b4;
+}
+
+.my-info .info-item {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+.item-logo {
+    width: 80px;
+    height: 80px;
+    margin: 5% auto;
+    border: 4px solid #fff;
+    box-sizing: border-box;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.item-logo:hover {
+    border-color: #bdbdcb;
+    background: #fff;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    51% {
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.item-logo img {
+    width: 60%;
+    height: 50%;
+    margin: 25% 0;
+    transition: all .8s;
+}
+
+.item-logo:hover img {
+    animation: move .8s;
+}
+
+.item-text {
+    width: 50%;
+    height: 40%;
+    margin: 0 auto;
+}
+
+.item-text-key,
+.item-text-value {
+    position: relative;
+    height: 40%;
+    font-size: 14px;
+    color: #fff;
+}
+
+.item-text-key {
+    text-align: left;
+}
+
+.item-text-value {
+    margin-bottom: 20%;
+    text-align: right;
+}
+
+.item-text-value:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+    transform: rotate(-35deg);
+    -webkit-transform: rotate(-35deg);
+}
+
+.self-description {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.self-description:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5%;
+    padding-bottom: 5%;
+    border-width: 2px 0 0 2px;
+    border-style: solid;
+    border-color: #5686d6;
+}
+
+.self-description:after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 5%;
+    padding-bottom: 5%;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: #5686d6;
+}
+
+.self-description p {
+    font-size: 14px;
+    line-height: 2.5;
+    color: #5686d6;
+}
+
+
+/*page3: ability*/
+
+.ablity-moto {
+    width: 80%;
+    margin: 50px auto;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.ability-list {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.ability-item {
+    float: left;
+    width: 33.3%;
+}
+
+.ability-name img {
+    width: 90px;
+    height: 100px;
+    transition: all 1s;
+}
+
+.ability-name img:hover {
+    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+}
+
+.ability-name p {
+    margin: 30px;
+}
+
+.ability-name span.arrow {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/arrow.png);
+    transition: transform .8s;
+}
+
+.ability-name:hover span.arrow {
+    transform: rotate(180deg);
+}
+
+.ability-name:hover + .ability-level {
+    height: 100px;
+    padding: 20px 0;
+}
+
+.ability-level {
+    position: relative;
+    height: 0;
+    left: -25%;
+    width: 150%;
+    border-radius: 1em;
+    background: #c8c8dc;
+    overflow: hidden;
+    transition: height .8s;
+}
+
+.ability-level ul {
+    text-align: left;
+    margin-left: 40px;
+}
+
+
+/*page4: my-experience*/
+
+.experience-start {
+    margin: 20px 0;
+}
+
+
+/*主要的图片轮播部分*/
+
+.carousel {
+    position: relative;
+    width: 900px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+}
+
+
+/*轮播图外包裹*/
+
+.item-wrapper {
+    position: relative;
+    height: 300px;
+}
+
+.carousel-item {
+    float: left;
+    width: 900px;
+    height: 300px;
+    background: url(../img/exp_bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+/*向前向后按钮*/
+
+.carousel-prev-next {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    right: 15px;
+    height: 60px;
+    margin-top: -30px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.carousel-prev-next a {
+    width: 60px;
+    height: 60px;
+}
+
+.carousel-prev a {
+    float: left;
+    background: url(../img/prev.png) no-repeat center;
+    background-size: cover;
+}
+
+.carousel-next a {
+    float: right;
+    background: url(../img/next.png) no-repeat center;
+    background-size: cover;
+}
+
+.career-item {
+    width: 400px;
+    margin: 40px 0 0 140px;
+}
+
+.career-item .company-name {
+    font-size: 150%;
+    line-height: 1;
+    margin: .3em 0;
+}
+
+.career-item .career-time {
+    line-height: 2.5;
+}
+
+.career-thing li {
+    margin-top: 10px;
+}
+
+
+/*轮播导航栏样式*/
+
+.carousel-nav {
+    position: relative;
+    width: 40%;
+    height: 30px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.carousel-nav hr {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    margin-top: -1px;
+    border: none;
+    background: #afafb0;
+}
+
+.carousel-nav a {
+    display: inline-block;
+    margin-left: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(#949494, #afafb0 50%, #fff 100%);
+    background: -moz-linear-gradient(#949494, #afafb0 50%, #fff 100%);
+    background: -o-linear-gradient(#949494, #afafb0 50%, #fff 100%);
+    background: linear-gradient(#949494, #afafb0 50%, #fff 100%);
+    z-index: 100;
+}
+
+
+/*page5: my-demo*/
+
+.demo-list {
+    width: 1000px;
+    height: 200px;
+    margin: 50px auto 20px;
+}
+
+.demo {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 150px;
+    margin: 0 25px;
+    background: #d2d2d2;
+    outline: 2px solid #efefef;
+    box-shadow: 0 2px 5px #8b8b8b;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.demo:hover {
+    background: #fff;
+}
+
+.demo-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    text-align: center;
+    transition: all 1s;
+}
+
+.demo:hover .demo-name {
+    bottom: 60%;
+}
+
+.demo-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 56px;
+    text-align: center;
+    transition: all 1s;
+}
+
+.demo:hover .demo-link {
+    top: 40%;
+}
+
+.demo-link-icon {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    background: url(../img/demo_link.png) no-repeat center;
+    background-size: cover;
+}
+
+.demo-covers {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.demo-covers a {
+    display: block;
+}
+
+.demo:hover .demo-covers {
+    opacity: 0.1;
+}
+
+
+/*page6 : study-plan*/
+
+
+/*左侧导航栏样式*/
+
+.sp-nav {
+    float: left;
+    position: relative;
+    width: 20%;
+    background: rgba(153, 153, 153, 0.3);
+    text-align: left;
+    left: 0;
+    transition: left 1s;
+}
+
+.sp-nav.hidden {
+    left: -20%;
+    margin-left: 30px;
+}
+
+.sp-wrapper {
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.study-list h3,
+.plan-list h3 {
+    padding-left: 5%;
+}
+
+.study-list ul,
+.plan-list ul {
+    list-style: none;
+    padding-left: 15%;
+}
+
+.plan-list ul li,
+.study-list ul li {
+    padding: 5px 20px 5px 5px;
+}
+
+.plan-list ul li:hover,
+.study-list ul li:hover {
+    background: rgba(0, 163, 207, 0.5);
+    box-shadow: 0 0 5px #90ccdc;
+}
+
+.toggle-sh {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    cursor: pointer;
+    background: url(../img/prev.png) no-repeat center;
+    background-size: cover;
+    transition: background 1s;
+}
+
+.toggle-sh.hidden {
+    background: url(../img/next.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/*右侧详情区域*/
+
+.sp-info {
+    width: 60%;
+    margin-left: 30%;
+    text-align: left;
+    animation: easeshow 1s linear;
+}
+
+.sp-info .tips {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.sp-info:after {
+    content: "";
+    clear: both;
+    /*去除浮动*/
+}
+
+.book-info {
+    overflow: hidden;
+    /*去除浮动*/
+}
+
+.book-img {
+    width: 106px;
+    height: 139px;
+    float: left;
+}
+
+.sp-info .info-item {
+    float: left;
+    margin-left: 50px;
+}
+
+.sp-info .info-item ul {
+    list-style: none;
+}
+
+.summary {
+    margin-top: 15px;
+}
+
+@keyframes easeshow {
+    0% {
+        transform: scale(0, 0);
+    }
+    70%,
+    100% {
+        transform: scale(1, 1);
+    }
+    85% {
+        transform: scale(1.1, 1.1);
+    }
+}
